@@ -1,176 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>1250 Gator-Bots</title>
-    <!-- Bootstrap -->
+    <title>Gator-Bots</title>
     <link href="css/bootstrap-5.3.7/bootstrap.css" rel="stylesheet">
     <script src="js/bootstrap-5.3.7/bootstrap.bundle.js"></script>
-    <link rel="icon" href="/img/Gator_Logo.png" type="image/x-icon" />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">1250</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown">
-<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+    <link rel="icon" href="img/Gator_Logo.png" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="nav"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(htmlContent => {
+                const container = document.getElementById('nav');
+                container.innerHTML = htmlContent;
+            })
+            .catch(error => console.error('Error loading external content:', error));
+    </script>
+
+    <main class="container py-3">
+        <div class="row align-items-center g-5">
+            <div class="col-md-8">
+                <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-3">Team 1250, The Gator-Bots</h1>
+                <p class="lead">
+                    Based in Dearborn Michigan, the Gator-Bots have proudly represented the Henry Ford
+                    Academy for over 20 years! Providing a fun an interactive learning experience for students at the
+                    Henry Ford Academy since 2004, we take pride in being able to help students find their passion in
+                    STEAM related fields.
+                </p>
+                <p class="lead">
+                    Are you a student at the Henry Ford Academy in Dearborn and are interested in joining? Please reach
+                    out to Ms. Goodman via email or visit the HFA Dearborn robotics page for further instructions.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="https://hfa-dearborn.org/athletics-activities/activitiesclubs/robotics/"
+                        class="btn btn-primary btn-lg px-4 me-md-2" style="background: rgb(0,90,55);">HFA Dearborn
+                        robotics</a>
+                    <a href="https://www.thebluealliance.com/team/1250/history/"
+                        class="btn btn-primary btn-lg px-4 me-md-2" style="background: rgb(0,90,55);">Gator-Bot
+                        history</a>
+                </div>
             </div>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-        </form>
-      </div>
-    </nav>
-    <section>
-    <div class="container"> <!-- Ensure this container is present for proper alignment -->
-      <div class="row align-items-center"> <!-- This is the new row for alignment -->
-        <div class="col-md-2 text-md-right text-center">
-          <img src="/img/Gator_Logo.png" alt="Left Logo" class="img-fluid"> <!-- Left logo -->
+            <div class="col-md-4">
+                <img src="img/hfa_horizontal.png" class="d-block mx-lg-auto img-fluid">
+            </div>
         </div>
+        <div class="row align-items-center py-5 g-5">
+            <div class="col-md-8">
+                <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-3">What is FIRST and FRC?</h1>
+                <p class="lead">
+                    <b>
+                        The most difficult fun you will ever have...
+                    </b>
+                </p>
+                <p class="lead">
+                    FIRST is a global non-profit organization dedicated to inspiring our youth to pursue careers
+                    in science and technology. FIRST Robotics Competition (FRC) is one of the programs offered by FIRST,
+                    specifically designed for high school students to design, build, and compete with robots in a
+                    sports-like
+                    environment. First Robotics Competition is more than just building robots; students are tested every
+                    day
+                    of
+                    the season to become the best version of themselves through STEM and competition.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="https://www.firstinspires.org/" class="btn btn-primary btn-lg px-4 me-md-2"
+                        style="background: rgb(0,90,55);">FIRST</a>
+                    <a href="https://www.firstinspires.org/robotics/frc" class="btn btn-primary btn-lg px-4 me-md-2"
+                        style="background: rgb(0,90,55);">First
+                        Robotics Competition</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="img/FIRST_Horz_RGB.png" class="d-block mx-lg-auto img-fluid">
+            </div>
+        </div>
+    </main>
+</body>
 
-        <div class="col-md-8 text-center">
-          <h1>Team 1250 the Gator-Bots&nbsp;</h1>
-          <p>Based in Dearborn Michigan, the Gator-Bots have proudly represented the Henry Ford Academy for 20 years this season!&nbsp; &nbsp;&nbsp;</p>
-        </div>
 
-        <div class="col-md-2 text-md-left text-center">
-          <img src="/img/2025/FIRST_Reefscape.png" alt="Right Logo" class="img-fluid"> <!-- Right logo -->
-        </div>
-      </div>
-    </div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h1>The most difficult fun you will ever have...</h1>
-            <p>At the Gator-Bots, students exercise the fundamentals learned at the Henry Ford Academy in order to engineer the best tool for the tasks that get thrown at them every year. While this is no trivial task, members of the team are guided through the engineering process from prototype, to final design and beyond!&nbsp;First Robotics Competition is more than just building robots; students are tested every day of the season to become the best version of themselves through STEM and competition</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container mt-2">
-        <div class="row">
-          <div class="col-md-4 col-12">
-            <ul class="list-unstyled">
-              <li class="media">
-<div class="media-body">
-              <h5 class="mt-0 mb-1">Check out our code!&nbsp;</h5>
-			    All code used on the robot during the season is open source and available on our <a href="https://github.com/FRC-1250">GitHub!</a> Feel free to take a look and reach out! </div>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-12">
-            <ul class="list-unstyled">
-              <li class="media">
-<div class="media-body">
-              <h5 class="mt-0 mb-1">Help us go to Worlds!</h5>
-                Through unwaving grit and effort from our students, we have qualified for worlds this season! Help us attend by donating to our <a href="https://gofund.me/e65eac0d">GoFundMe!</a></div>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-12">
-            <ul class="list-unstyled">
-              <li class="media">
-<div class="media-body">
-              <h5 class="mt-0 mb-1">Want to join the team?</h5>
-                If you are student at the Henry Ford Academy in Dearborn and are interested in joining, please reach out to Ms. Goodman via email in order to get in contact! </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h2>The 2024 Season So Far...</h2>
-            <p>From Disctrict Finalists in Livonia, to Alliance Captain at the Michigan State Championship, the Gator-Bots have chomped their way through the competition with style and gracious professionalism!&nbsp;&nbsp;</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="card-group">
-		<div class="card">
-			<img class="card-img-top" src="/img/2024/livonia/53611943634_0cbc6e8fd7_c.jpg" alt="">
-			<div class="card-body">
-				<h4 class="card-title">Alliance Captains at Livonia</h4>
-				<p class="card-text">Ending the district rounds strong, 1250 were finalists at the FIM Livonia district event as the underdog team!</p>
-			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top" src="/img/2024/livonia/53611723703_64a23bb94d_c.jpg" alt="">
-			<div class="card-body">
-				<h4 class="card-title">Teamwork and Grit</h4>
-				<p class="card-text">Working together, the Gator-Bots pushed to states and beyond!</p>
-			</div>
-		</div>        
-	  </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col-md-3 col-6"><img class="img-fluid float-right" src="/img/2024/livonia/53610688767_866ba06a8d_c.jpg" alt="" width="720px" height="480"></div>
-          <div class="col-md-3 col-6"><img class="img-fluid float-left" src="/img/2024/livonia/53611899694_d600ca0694_c.jpg" alt="" width="720px" height="480"></div>
-          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="/img/2024/livonia/53611933459_ff3f21db58_c.jpg" alt="" width="720px" height="480"></div>
-          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="/img/2024/livonia/53611943634_0cbc6e8fd7_c.jpg" alt="" width="720px" height="480"></div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-md-3 col-6"><img class="img-fluid float-right" src="/img/2024/mi_champs/DSC_1224.jpg" alt=""></div>
-          <div class="col-md-3 col-6"><img class="img-fluid float-left" src="/img/2024/mi_champs/DSC_1256.jpg" alt=""></div>
-          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="/img/2024/mi_champs/DSC_1368.jpg" alt=""></div>
-          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="/img/2024/mi_champs/IMG_2198.jpg" alt=""></div>
-        </div>
-      </div>
-    <section>
-    <div class="container text-center">
-    <div class="ratio ratio-16x9">
-        <iframe class="w-100 v-100" style=" height: 600px;" src="https://calendar.google.com/calendar/embed?src=hfarobotics%40hfa-dearborn.org&amp;ctz=America%2FNew_York" frameborder="0" scrolling="no"></iframe></div>
-    </div>
-    </section>
-    <div class="section mt-3">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-4 col-12">
-            <h3 class="text-center">WHO WE ARE</h3>
-            <p>Providing a fun an interactive learning experience for students at the Henry Ford Academy since 2004, FRC team 1250 takes pride in being able to help students find their passion in STEAM related fields.</p>
-          </div>
-          <div class="col-md-4 col-12">
-            <h3 class="text-center">CONTACT HFA</h3>
-            <address class="text-center">
-              <strong>Henry Ford Academy</strong><br>
-              20900 Oakwood, Dearborn,<br>
-              MI, 48124, US<br>
-              <abbr title="Phone">P:</abbr> (313) 982-6022
-            </address>
-          </div>
-<div class="col-md-4 col-12">
-  <img src="/img/FIRST_Horz_RGB.png" alt="img" class="img-fluid">
-</div>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <footer class="text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <p>Copyright © FRC 1250. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
+
+
 </html>
