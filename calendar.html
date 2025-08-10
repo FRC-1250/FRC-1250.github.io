@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gator-Bots</title>
     <link href="css/bootstrap-5.3.7/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <script src="js/bootstrap-5.3.7/bootstrap.bundle.js"></script>
     <link rel="icon" href="img/Gator_Logo.png" type="image/x-icon" />
 </head>
@@ -23,7 +24,8 @@
             .catch(error => console.error('Error loading external content:', error));
     </script>
 
-    <main class="container py-3">
+    <main class="container main-container">
+        <h1>Meeting and events schedule</h1>
         <div class="ratio ratio-16x9">
             <iframe class="w-100 v-100" style=" height: 600px;"
                 src="https://calendar.google.com/calendar/embed?src=hfarobotics%40hfa-dearborn.org&amp;ctz=America%2FNew_York"
