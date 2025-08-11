@@ -9,20 +9,12 @@
     <link href="css/bootstrap-5.3.7/bootstrap.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <script src="js/bootstrap-5.3.7/bootstrap.bundle.js"></script>
-    <link rel="icon" href="img/Gator_Logo.png" type="image/x-icon" />
+    <link rel="icon" href="images/logos/Gator_Logo.png" type="image/x-icon" />
 </head>
 
 <body>
     <div id="nav"></div>
-    <script>
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(htmlContent => {
-                const container = document.getElementById('nav');
-                container.innerHTML = htmlContent;
-            })
-            .catch(error => console.error('Error loading external content:', error));
-    </script>
+    <script src="js/load-nav.js"></script>
 
     <main class="container main-container">
         <div class="row">
@@ -75,127 +67,22 @@
         </div>
         <div class="row">
             <div class="col mx-auto d-block">
-                <img src="img/IMG_8024.png" class="d-block mx-lg-auto img-fluid">
+                <img src="images/IMG_8024.png" class="d-block mx-lg-auto img-fluid">
             </div>
         </div>
         <hr>
-        <h1>
-            Diamond ($5000+)
-        </h1>
-        <div class="row row-cols-1 row-cols-md-2 g-4 ">
-            <div class="col">
-                <div class="card border border-5 border-black h-100">
-                    <img src="img/Gator_Logo.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Quantum Whatever</h5>
-                        <p class="card-text">System & Software Architecture Solutions.</p>
-                        <a href="https://www.quantumwhatever.com/" class="btn btn-primary"
-                            style="background: rgb(0,90,55);">Website</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card border border-5 border-black h-100">
-                    <img src="img/Gator_Logo.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Pit Podcast</h5>
-                        <p class="card-text">Thank you for us for joining, and welcome to Pit Podcast, where we dive
-                            deep into real topics that matter! </p>
-                        <a href="https://www.youtube.com/@PitPodcastOfficial" class="btn btn-primary"
-                            style="background: rgb(0,90,55);">Website</a>
-                    </div>
-                </div>
-            </div>
+        <div id="diamond-sponsors" data-sponsor-level="diamond">
         </div>
 
-
-        <h1>
-            Gold ($1250 - $4999)
-        </h1>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 ">
-            <div class="col">
-                <div class="card border border-5 border-black h-100">
-                    <img src="img/Gator_Logo.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Quantum Whatever</h5>
-                        <p class="card-text">System & Software Architecture Solutions.</p>
-                        <a href="https://www.quantumwhatever.com/" class="btn btn-primary"
-                            style="background: rgb(0,90,55);">Website</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card border border-5 border-black h-100">
-                    <img src="img/Gator_Logo.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Pit Podcast</h5>
-                        <p class="card-text">Thank you for us for joining, and welcome to Pit Podcast, where we dive
-                            deep into real topics that matter! </p>
-                        <a href="https://www.youtube.com/@PitPodcastOfficial" class="btn btn-primary"
-                            style="background: rgb(0,90,55);">Website</a>
-                    </div>
-                </div>
-            </div>
+        <div id="gold-sponsors" data-sponsor-level="gold">
         </div>
 
-        <h1>
-            Silver ($500- $1249)
-        </h1>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 ">
-            <div class="col">
-                <div class="card border border-5 border-black h-100">
-                    <img src="img/Gator_Logo.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Quantum Whatever</h5>
-                        <p class="card-text">System & Software Architecture Solutions.</p>
-                        <a href="https://www.quantumwhatever.com/" class="btn btn-primary"
-                            style="background: rgb(0,90,55);">Website</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card border border-5 border-black h-100">
-                    <img src="img/Gator_Logo.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Pit Podcast</h5>
-                        <p class="card-text">Thank you for us for joining, and welcome to Pit Podcast, where we dive
-                            deep into real topics that matter! </p>
-                        <a href="https://www.youtube.com/@PitPodcastOfficial" class="btn btn-primary"
-                            style="background: rgb(0,90,55);">Website</a>
-                    </div>
-                </div>
-            </div>
+        <div id="silver-sponsors" data-sponsor-level="silver">
         </div>
 
-
-        <h1>
-            Bronze ($250 - $499)
-        </h1>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 ">
-            <div class="col">
-                <div class="card border border-5 border-black h-100">
-                    <img src="img/Gator_Logo.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Quantum Whatever</h5>
-                        <p class="card-text">System & Software Architecture Solutions.</p>
-                        <a href="https://www.quantumwhatever.com/" class="btn btn-primary"
-                            style="background: rgb(0,90,55);">Website</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card border border-5 border-black h-100">
-                    <img src="img/Gator_Logo.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Pit Podcast</h5>
-                        <p class="card-text">Thank you for us for joining, and welcome to Pit Podcast, where we dive
-                            deep into real topics that matter! </p>
-                        <a href="https://www.youtube.com/@PitPodcastOfficial" class="btn btn-primary"
-                            style="background: rgb(0,90,55);">Website</a>
-                    </div>
-                </div>
-            </div>
+        <div id="bronze-sponsors" data-sponsor-level="bronze">
         </div>
+        <script src="js/load-sponsors.js"></script>
     </main>
 </body>
 

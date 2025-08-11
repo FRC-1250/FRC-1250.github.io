@@ -1,0 +1,50 @@
+{
+    "diamond": [
+        {
+            "imagePath": "images/logos/HFA.jpg",
+            "name": "Henry Ford Academy, Dearborn",
+            "description": "Inspired by Henry Ford’s “Learning by Doing” philosophy, Henry Ford Academy has been at the forefront of innovative teaching and active learning for over 25 years. HFA is truly one-of-a-kind--we do school like nobody else!",
+            "website": "https://hfa-dearborn.org/"
+        },
+        {
+            "imagePath": "images/logos/thfLogo.png",
+            "name": "The Henry Ford",
+            "description": "The Henry Ford is a complex of museums and historical attractions in Dearborn, Michigan, dedicated to showcasing American innovation and ingenuity.",
+            "website": "https://www.thehenryford.org/"
+        },
+        {
+            "imagePath": "images/logos/QW_BW_Embroider.png",
+            "name": "Quantum Whatever",
+            "description": "System & Software Architecture Solutions.",
+            "website": "https://www.quantumwhatever.com/"
+        }
+    ],
+    "gold": [
+        {
+            "imagePath": "images/logos/New_York_Life.svg",
+            "name": "New York Life",
+            "description": "New York Life Insurance Company is a large mutual insurance company, and the largest in the United States, providing life insurance, retirement planning, and investment services.",
+            "website": "https://www.newyorklife.com/"
+        },
+        {
+            "imagePath": "images/logos/dadara.png",
+            "name": "DADARA",
+            "description": "Detroit and Downriver Area Robotics Alliance."
+        }
+    ],
+    "silver": [
+        {
+            "imagePath": "images/logos/Pit_Podcast_Background.png",
+            "name": "Pit Podcast",
+            "description": "Thank you for us for joining, and welcome to Pit Podcast, where we dive deep into real topics that matter!",
+            "website": "https://www.youtube.com/@PitPodcastOfficial/"
+        },
+        {
+            "imagePath": "images/logos/royal-shirtery.png",
+            "name": "Royal Shirtery",
+            "description": "Welcome to Royal Shirtery, where we bring your unique vision to life through our exquisite collection of custom personalized designs on apparel and more, ensuring every piece reflects your distinctive style.",
+            "website": "https://royalshirtery.com/"
+        }
+    ],
+    "bronze": {}
+}
