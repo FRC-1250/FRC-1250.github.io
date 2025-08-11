@@ -20,11 +20,26 @@ document.addEventListener("DOMContentLoaded", function () {
           rowDiv.className = "row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4";
 
           sponsors.forEach(sponsor => {
-            const imageHtml = sponsor.website ?
-              `<a href="${sponsor.website}" target="_blank">
-                <img src="${sponsor.imagePath}" class="card-img-top" alt="${sponsor.name} logo">
-              </a>` :
-              `<img src="${sponsor.imagePath}" class="card-img-top" alt="${sponsor.name} logo">`;
+            if (!sponsor.name || !sponsor.description) {
+              return
+            }
+
+            imageHtml = ``;
+            if (sponsor.website && sponsor.imagePath) {
+              imageHtml =
+                `<a href="${sponsor.website}" target="_blank">
+                    <img src="${sponsor.imagePath}" class="card-img-top" alt="${sponsor.name} logo">
+                </a>`;
+            } else if (sponsor.website) {
+              imageHtml =
+                `<a href="${sponsor.website}" target="_blank">
+                    <img src="images/logos/Gator_Logo.png" class="card-img-top" alt="${sponsor.name} logo">
+                </a>`;
+            } else if (sponsor.imagePath) {
+              imageHtml = `<img src="${sponsor.imagePath}" class="card-img-top" alt="${sponsor.name} logo">`;
+            } else {
+              imageHtml = `<img src="images/logos/Gator_Logo.png" class="card-img-top" alt="${sponsor.name} logo">`;
+            }
 
             const sponsorHtml = `
               <div class="col">
