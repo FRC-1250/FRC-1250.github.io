@@ -9,20 +9,12 @@
     <link href="css/bootstrap-5.3.7/bootstrap.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <script src="js/bootstrap-5.3.7/bootstrap.bundle.js"></script>
-    <link rel="icon" href="img/Gator_Logo.png" type="image/x-icon" />
+    <link rel="icon" href="images/logos/Gator_Logo.png" type="image/x-icon" />
 </head>
 
 <body>
     <div id="nav"></div>
-    <script>
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(htmlContent => {
-                const container = document.getElementById('nav');
-                container.innerHTML = htmlContent;
-            })
-            .catch(error => console.error('Error loading external content:', error));
-    </script>
+    <script src="js/load-nav.js"></script>
 
     <main class="container main-container">
         <div class="row align-items-center g-3">
@@ -48,7 +40,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <img src="img/hfa_horizontal.png" class="d-block mx-lg-auto img-fluid">
+                <img src="images/logos/hfa_horizontal.png" class="d-block mx-lg-auto img-fluid">
             </div>
         </div>
         <div class="row align-items-center g-3">
@@ -78,7 +70,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <img src="img/FIRST_Horz_RGB.png" class="d-block mx-lg-auto img-fluid">
+                <img src="images/logos/FIRST_Horz_RGB.png" class="d-block mx-lg-auto img-fluid">
             </div>
         </div>
     </main>
