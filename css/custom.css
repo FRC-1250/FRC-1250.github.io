@@ -1,24 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Orbitron', sans-serif;
 }
 
-.navbar-toggler {
-    border-color: #000000;
-    border-width: 2px !important;
+.nav-link {
+    color: #f8f9fa;
+    padding: 0.75rem;
+    font-family: 'Orbitron', sans-serif;
+    transition: color 0.2s ease-in-out;
 }
 
-.nav-link {
-    padding: 0.75rem;
+.nav-link.active {
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 body {
     background: #f8f9fa;
-}
-
-.row {
-    margin-bottom: 2rem;
 }
 
 .main-container {
@@ -33,10 +37,6 @@ p {
 ul {
     font-size: 1.15rem;
     font-weight: 350;
-}
-
-.nav-link {
-    color: white;
 }
 
 .card-img-top {
