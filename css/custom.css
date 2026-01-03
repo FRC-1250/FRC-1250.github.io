@@ -5,14 +5,14 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.nav-link {
     font-family: 'Orbitron', sans-serif;
 }
 
 .nav-link {
     color: #f8f9fa;
     padding: 0.75rem;
-    font-family: 'Orbitron', sans-serif;
     transition: color 0.2s ease-in-out;
 }
 
@@ -23,10 +23,13 @@ h6 {
 
 body {
     background: #f8f9fa;
+
+    /* Force the scroll bar to always be present to prevent content shifting on short pagess */
+    overflow-y: scroll;
 }
 
 .main-container {
-    padding: 1rem;
+    padding-top: 1rem;
 }
 
 p {
