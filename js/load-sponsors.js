@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // Create and append the h2 heading for the sponsor level
           const heading = document.createElement('h2');
           heading.className = "display-6 border-bottom text-center p-2 mb-4";
-          heading.textContent = `${level.charAt(0).toUpperCase() + level.slice(1)} Sponsors`;
+          heading.textContent = `${level.charAt(0).toUpperCase() + level.slice(1)}`;
           containerElement.appendChild(heading);
 
           // Create the parent div with the specified classes
