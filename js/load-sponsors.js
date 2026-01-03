@@ -10,14 +10,15 @@ document.addEventListener("DOMContentLoaded", function () {
         containerElement.innerHTML = '';
 
         if (sponsors && sponsors.length > 0) {
-          // Create and append the h1 heading for the sponsor level
-          const heading = document.createElement('h1');
-          heading.textContent = `${level.charAt(0).toUpperCase() + level.slice(1)} Sponsors`;
+          // Create and append the h2 heading for the sponsor level
+          const heading = document.createElement('h2');
+          heading.className = "display-6 border-bottom text-center p-2 mb-4";
+          heading.textContent = `${level.charAt(0).toUpperCase() + level.slice(1)}`;
           containerElement.appendChild(heading);
 
           // Create the parent div with the specified classes
           const rowDiv = document.createElement('div');
-          rowDiv.className = "row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4";
+          rowDiv.className = "row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5";
 
           sponsors.forEach(sponsor => {
             if (!sponsor.name || !sponsor.description) {
@@ -43,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const sponsorHtml = `
               <div class="col">
-                <div class="card border border-5 border-black h-100">
+                <div class="card h-100 shadow border-0">
                   ${imageHtml}
                   <div class="card-body">
                   <hr>

@@ -1,18 +1,35 @@
-.navbar-toggler {
-    border-color: #000000;
-    border-width: 2px !important;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nav-link {
+    font-family: 'Orbitron', sans-serif;
 }
 
 .nav-link {
+    color: #f8f9fa;
     padding: 0.75rem;
+    transition: color 0.2s ease-in-out;
 }
 
-.row {
-    margin-bottom: 2rem;
+.nav-link.active {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+body {
+    background: #f8f9fa;
+
+    /* Force the scroll bar to always be present to prevent content shifting on short pagess */
+    overflow-y: scroll;
 }
 
 .main-container {
-    padding: 1rem;
+    padding-top: 1rem;
 }
 
 p {
@@ -25,17 +42,9 @@ ul {
     font-weight: 350;
 }
 
-.nav-link {
-    color: white;
-}
-
 .card-img-top {
     padding: 0.25rem;
     padding-bottom: 0px;
     width: 100%;
     aspect-ratio: 1 / 1
-}
-
-.card-body {
-    padding-top: 0px;
 }
