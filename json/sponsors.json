@@ -38,12 +38,6 @@
             "name": "Pit Podcast",
             "description": "Thank you for us for joining, and welcome to Pit Podcast, where we dive deep into real topics that matter!",
             "website": "https://www.youtube.com/@PitPodcastOfficial/"
-        },
-        {
-            "imagePath": "images/logos/royal-shirtery.png",
-            "name": "Royal Shirtery",
-            "description": "Welcome to Royal Shirtery, where we bring your unique vision to life through our exquisite collection of custom personalized designs on apparel and more, ensuring every piece reflects your distinctive style.",
-            "website": "https://royalshirtery.com/"
         }
     ],
     "bronze": []
