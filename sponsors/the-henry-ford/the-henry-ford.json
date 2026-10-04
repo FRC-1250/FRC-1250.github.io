@@ -1,0 +1,12 @@
+{
+    "name": "The Henry Ford",
+    "description": "The Henry Ford is a complex of museums and historical attractions in Dearborn, Michigan, dedicated to showcasing American innovation and ingenuity.",
+    "website": "https://www.thehenryford.org/",
+    "imagePath": "the-henry-ford.png",
+    "sponsorships": [
+        {
+            "year": -1,
+            "tier": "diamond"
+        }
+    ]
+}

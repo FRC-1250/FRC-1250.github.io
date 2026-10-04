@@ -1,0 +1,12 @@
+{
+    "name": "Pit Podcast",
+    "description": "Thank you for us for joining, and welcome to Pit Podcast, where we dive deep into real topics that matter!",
+    "website": "https://www.youtube.com/@PitPodcastOfficial/",
+    "imagePath": "pit-podcast.png",
+    "sponsorships": [
+        {
+            "year": -1,
+            "tier": "silver"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Placeholder Name",
+    "description": "Description for the placeholder sponsor.",
+    "website": "https://www.placeholder.com/",
+    "imagePath": "images/logos/placeholder.png",
+    "sponsorships": [
+        {
+            "year": 2024,
+            "tier": "diamond"
+        }
+    ]
+}

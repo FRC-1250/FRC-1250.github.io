@@ -1,0 +1,12 @@
+{
+    "name": "Blue Arc Apparel",
+    "description": "Description for the placeholder sponsor.",
+    "website": "https://shopbaapparel.com/",
+    "imagePath": "blue-arc-apparel.png",
+    "active": [
+        {
+            "year": 2026,
+            "tier": "bronze"
+        }
+    ]
+}
