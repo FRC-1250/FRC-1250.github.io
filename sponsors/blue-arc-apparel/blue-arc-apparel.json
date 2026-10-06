@@ -3,7 +3,7 @@
     "description": "Description for the placeholder sponsor.",
     "website": "https://shopbaapparel.com/",
     "imagePath": "blue-arc-apparel.png",
-    "active": [
+    "sponsorships": [
         {
             "year": 2026,
             "tier": "bronze"
