@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
             if (sponsor.website && sponsor.imagePath) {
               imageHtml = `<a href="${sponsor.website}" target="_blank"><img src="${sponsor.imagePath}" class="card-img-top" alt="${sponsor.name} logo"></a>`;
             } else if (sponsor.website) {
-              imageHtml = `<a href="${sponsor.website}" target="_blank"><img src="images/gator-bots.png" class="card-img-top" alt="${sponsor.name} logo"></a>`;
+              imageHtml = `<a href="${sponsor.website}" target="_blank"><img src="images/logos/gator-bots.png" class="card-img-top" alt="${sponsor.name} logo"></a>`;
             } else if (sponsor.imagePath) {
               imageHtml = `<img src="${sponsor.imagePath}" class="card-img-top" alt="${sponsor.name} logo">`;
             } else {
-              imageHtml = `<img src="images/gator-bots.png" class="card-img-top" alt="${sponsor.name} logo">`;
+              imageHtml = `<img src="images/logos/gator-bots.png" class="card-img-top" alt="${sponsor.name} logo">`;
             }
 
             const sponsorHtml = `
