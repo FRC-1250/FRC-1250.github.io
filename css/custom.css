@@ -51,14 +51,14 @@ footer.navbar {
     background: rgb(0, 90, 55);
 }
 
-ul {
-    font-size: 1.15rem;
-    font-weight: 350;
+.bg-gator-green:hover,
+.bg-gator-green:focus {
+    background: #6c757d !important;
+    color: #fff !important;
 }
 
-.card-img-top {
-    padding: 0.25rem;
-    padding-bottom: 0px;
-    width: 100%;
-    aspect-ratio: 1 / 1
+.sponsor-card img {
+    max-width: 225px !important;
+    height: auto !important;
+    display: block !important;
 }
