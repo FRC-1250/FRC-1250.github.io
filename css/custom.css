@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron:wght@400..900|Exo:wght@300..700&display=swap');
 
 h1,
 h2,
+.nav-link {
+    font-family: 'Orbitron', sans-serif;
+}
+
 h3,
 h4,
 h5,
-h6,
-.nav-link {
-    font-family: 'Orbitron', sans-serif;
+h6 {
+    font-family: 'Exo', sans-serif;
 }
 
 .nav-link {
@@ -21,20 +24,31 @@ h6,
     text-underline-offset: 5px;
 }
 
-body {
-    background: #f8f9fa;
-
-    /* Force the scroll bar to always be present to prevent content shifting on short pagess */
-    overflow-y: scroll;
+p,
+li,
+blockquote {
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .main-container {
     padding-top: 1rem;
+    margin-bottom: 0 !important;
 }
 
-p {
-    font-size: 1.15rem;
-    font-weight: 350;
+body {
+    background: #f8f9fa;
+    /* Force the scroll bar to always be present to prevent content shifting on short pagess */
+    overflow-y: scroll;
+}
+
+nav.navbar,
+footer.navbar {
+    background: linear-gradient(to bottom, rgb(0, 90, 55) 0%, rgb(0, 60, 55) 100%);
+}
+
+.bg-gator-green {
+    background: rgb(0, 90, 55);
 }
 
 ul {
