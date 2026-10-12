@@ -1,3 +1,12 @@
+// Helper function to sanitize URLs
+function sanitizeUrl(url) {
+  try {
+    return new URL(url).toString();
+  } catch (e) {
+    return url;
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   // Fetch and display sponsors based on their tier level (diamond, gold, silver, bronze)
   function fetchAndDisplaySponsors(containerElement, level) {
@@ -5,34 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('json/sponsors.json')
       .then(response => response.json())
       .then(data => {
-        // Filter sponsors based on tier and activity status
-        const sponsors = (data || []).filter(sponsor => {
-          if (!sponsor.sponsorships || !Array.isArray(sponsor.sponsorships)) {
-            return false;
-          }
-
-          // Check if sponsor matches the requested tier level
-          for (const sponsorship of sponsor.sponsorships) {
-            const isCorrectTier = sponsorship.tier === level;
-
-            // Determine if the sponsor is currently active
-            let isActive = false;
-            if (sponsorship.year === -1) {
-              // Permanent sponsors are always active
-              isActive = true;
-            } else if (typeof sponsorship.year === 'number') {
-              // Year X means: Sept 1, Year X to Aug 31, Year X+1
-              const start = new Date(sponsorship.year, 8, 1); // Month 8 is September
-              const end = new Date(sponsorship.year + 1, 8, 1);
-              isActive = new Date() >= start && new Date() < end;
-            }
-
-            if (isCorrectTier && isActive) {
-              return true;
-            }
-          }
-          return false;
-        });
+        // Get the specific tier array
+        const sponsors = data[level];
 
         // Clear the main container and prepare to inject the new row
         containerElement.innerHTML = '';
@@ -44,51 +27,123 @@ document.addEventListener("DOMContentLoaded", function () {
           containerElement.appendChild(heading);
 
           const rowDiv = document.createElement('div');
-          rowDiv.className = "row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 mb-5";
+          rowDiv.className = "row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-5 mb-5";
 
-          // Process each sponsor and generate appropriate HTML
+          // Process each sponsor and generate DOM elements
           sponsors.forEach(function(sponsor) {
+            // Skip if no name
             if (!sponsor.name) {
               return;
             }
 
-            // Validate if the sponsor has a legitimate image path
-            const imagePath = sponsor.imagePath;
-            const isValidImage =
-              imagePath !== null &&
-              imagePath !== undefined &&
-              typeof imagePath === 'string' &&
-              imagePath.trim() !== '';
+            const hasImage = !!sponsor.imagePath && sponsor.imagePath.trim() !== '';
+            const hasWebsite = !!sponsor.website && sponsor.website.trim() !== '';
 
-            // Determine which HTML template to use based on image availability
-            let sponsorHTML;
+            console.log("Processing:", sponsor.name, "| hasImage:", hasImage, "| hasWebsite:", hasWebsite);
 
-            if (isValidImage) {
-              // Generate HTML for sponsors with logos
+            let linkElement = null;
+            let imgElement = null;
+            let h3Element = null;
+
+            // Case 1: Has image AND website - logo links to website URL
+            if (hasImage && hasWebsite) {
+              console.log("Case 1:", sponsor.name, "creating linked logo");
+              const imagePath = 'images/sponsor-logos/' + sponsor.imagePath;
               const safeName = sponsor.name.replace(/\s+/g, '-');
               const altText = "logo of " + sponsor.name;
 
-              sponsorHTML = `
-                <div class="col">
-                  <div class="sponsor-card" id="image-sponsor-${safeName} has-image" style="display: flex; align-items: center; justify-content: center; min-height: 250px;">
-                    <img src="${imagePath}" alt="${altText}">
-                  </div>
-                </div>
-              `;
-            } else {
-              // Generate HTML for sponsors without images (text only)
-              const safeName = sponsor.name.replace(/\s+/g, '-');
+              linkElement = document.createElement('a');
+              linkElement.href = sponsor.website;
+              linkElement.target = "_blank";
+              linkElement.rel = "noopener noreferrer";
 
-              sponsorHTML = `
-                <div class="col">
-                  <div class="sponsor-card" id="text-sponsor-${safeName}" style="display: flex; align-items: center; justify-content: center; min-height: 250px;">
-                    <h3 class="text-uppercase" id="${safeName}">${sponsor.name}</h3>
-                  </div>
-                </div>
-              `;
+              imgElement = document.createElement('img');
+              imgElement.src = imagePath;
+              imgElement.alt = altText;
+
+              linkElement.appendChild(imgElement);
+
+              const card = document.createElement('div');
+              card.className = "sponsor-card card-body-standard";
+              card.id = "image-sponsor-" + safeName;
+              card.style.cssText = "display: flex; align-items: center; justify-content: center; min-height: 250px;";
+
+              const container = document.createElement('div');
+              container.className = "col";
+              container.appendChild(card);
+              card.appendChild(linkElement);
+              rowDiv.appendChild(container);
             }
 
-            rowDiv.innerHTML += sponsorHTML;
+            // Case 2: No image, HAS website - clickable name link
+            else if (!hasImage && hasWebsite) {
+              console.log("Case 2:", sponsor.name, "creating linked text");
+              const safeName = sponsor.name.replace(/\s+/g, '-');
+
+              linkElement = document.createElement('a');
+              linkElement.href = sponsor.website;
+              linkElement.target = "_blank";
+              linkElement.rel = "noopener noreferrer";
+              linkElement.className = "text-link";
+
+              h3Element = document.createElement('h3');
+              h3Element.className = "text-uppercase";
+              h3Element.textContent = sponsor.name;
+
+              linkElement.appendChild(h3Element);
+
+              const card = document.createElement('div');
+              card.className = "sponsor-card card-body-standard";
+              card.id = "text-sponsor-" + safeName;
+              card.style.cssText = "display: flex; align-items: center; justify-content: center; min-height: 250px;";
+
+              const container = document.createElement('div');
+              container.className = "col";
+              container.appendChild(card);
+              card.appendChild(h3Element);  // Append h3 to card
+              rowDiv.appendChild(container);
+            }
+
+            // Case 3: Has image, NO website - plain logo only
+            else if (hasImage && !hasWebsite) {
+              const imagePath = 'images/sponsor-logos/' + sponsor.imagePath;
+              const safeName = sponsor.name.replace(/\s+/g, '-');
+              const altText = "logo of " + sponsor.name;
+
+              imgElement = document.createElement('img');
+              imgElement.src = imagePath;
+              imgElement.alt = altText;
+
+              const card = document.createElement('div');
+              card.className = "sponsor-card card-body-standard";
+              card.id = "image-sponsor-" + safeName;
+              card.style.cssText = "display: flex; align-items: center; justify-content: center; min-height: 250px;";
+
+              const container = document.createElement('div');
+              container.className = "col";
+              container.appendChild(card);
+              card.appendChild(imgElement);  // Append image to card
+              rowDiv.appendChild(container);            }
+
+            // Case 4: No image, no website - plain text only
+            else {
+              const safeName = sponsor.name.replace(/\s+/g, '-');
+
+              h3Element = document.createElement('h3');
+              h3Element.className = "text-uppercase";
+              h3Element.textContent = sponsor.name;
+
+              const card = document.createElement('div');
+              card.className = "sponsor-card card-body-standard";
+              card.id = "text-sponsor-" + safeName;
+              card.style.cssText = "display: flex; align-items: center; justify-content: center; min-height: 250px;";
+
+              const container = document.createElement('div');
+              container.className = "col";
+              container.appendChild(card);
+              card.appendChild(h3Element);  // Append h3 to card
+              rowDiv.appendChild(container);
+            }
           });
 
           containerElement.appendChild(rowDiv);

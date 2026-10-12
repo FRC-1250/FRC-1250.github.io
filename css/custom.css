@@ -47,6 +47,30 @@ footer.navbar {
     background: linear-gradient(to bottom, rgb(0, 90, 55) 0%, rgb(0, 60, 55) 100%);
 }
 
+/* Small screens: push hamburger button to right */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        justify-content: flex-start !important;
+    }
+
+    .navbar-toggler {
+        margin-left: auto !important;
+        justify-self: end !important;
+    }
+}
+
+/* Large screens: keep original centered layout */
+@media (min-width: 768px) {
+    .navbar-collapse {
+        justify-content: center !important;
+    }
+
+    .navbar-toggler {
+        margin-left: 0 !important;
+        justify-self: center !important;
+    }
+}
+
 .bg-gator-green {
     background: rgb(0, 90, 55);
 }

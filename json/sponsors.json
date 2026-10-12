@@ -1,0 +1,55 @@
+{
+  "diamond": [
+    {
+      "name": "The Henry Ford",
+      "website": "https://www.thehenryford.org/",
+      "imagePath": "the-henry-ford.png"
+    },
+    {
+      "name": "Henry Ford Academy, Dearborn",
+      "website": "https://hfa-dearborn.org/",
+      "imagePath": "henry-ford-academy.jpg"
+    },
+    {
+      "name": "Quantum Whatever",
+      "website": "https://www.quantumwhatever.com/",
+      "imagePath": "quantum-whatever.png"
+    }
+  ],
+  "gold": [
+    {
+      "name": "New York Life",
+      "website": "https://www.newyorklife.com/",
+      "imagePath": "new-york-life.svg"
+    },
+    {
+      "name": "DADARA",
+      "website": "",
+      "imagePath": "dadara.png"
+    }
+  ],
+  "silver": [
+    {
+      "name": "Pit Podcast",
+      "website": "https://www.youtube.com/@PitPodcastOfficial/",
+      "imagePath": "pit-podcast.png"
+    }
+  ],
+  "bronze": [
+    {
+      "name": "Blue Arc Apparel",
+      "website": "https://shopbaapparel.com/",
+      "imagePath": "blue-arc-apparel.png"
+    },
+    {
+      "name": "Eagle Works",
+      "website": "https://teameagleworks.com/",
+      "imagePath": "eagle-works.jpg"
+    },
+    {
+      "name": "H3D",
+      "website": "",
+      "imagePath": ""
+    }
+  ]
+}
