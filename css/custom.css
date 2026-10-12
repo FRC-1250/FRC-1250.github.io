@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron:wght@400..900|Exo:wght@300..700&display=swap');
 
 h1,
 h2,
+.nav-link {
+    font-family: 'Orbitron', sans-serif;
+}
+
 h3,
 h4,
 h5,
-h6,
-.nav-link {
-    font-family: 'Orbitron', sans-serif;
+h6 {
+    font-family: 'Exo', sans-serif;
 }
 
 .nav-link {
@@ -21,30 +24,65 @@ h6,
     text-underline-offset: 5px;
 }
 
-body {
-    background: #f8f9fa;
-
-    /* Force the scroll bar to always be present to prevent content shifting on short pagess */
-    overflow-y: scroll;
+p,
+li,
+blockquote {
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .main-container {
     padding-top: 1rem;
+    margin-bottom: 0 !important;
 }
 
-p {
-    font-size: 1.15rem;
-    font-weight: 350;
+body {
+    background: #f8f9fa;
+    /* Force the scroll bar to always be present to prevent content shifting on short pagess */
+    overflow-y: scroll;
 }
 
-ul {
-    font-size: 1.15rem;
-    font-weight: 350;
+nav.navbar,
+footer.navbar {
+    background: linear-gradient(to bottom, rgb(0, 90, 55) 0%, rgb(0, 60, 55) 100%);
 }
 
-.card-img-top {
-    padding: 0.25rem;
-    padding-bottom: 0px;
-    width: 100%;
-    aspect-ratio: 1 / 1
+/* Small screens: push hamburger button to right */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        justify-content: flex-start !important;
+    }
+
+    .navbar-toggler {
+        margin-left: auto !important;
+        justify-self: end !important;
+    }
+}
+
+/* Large screens: keep original centered layout */
+@media (min-width: 768px) {
+    .navbar-collapse {
+        justify-content: center !important;
+    }
+
+    .navbar-toggler {
+        margin-left: 0 !important;
+        justify-self: center !important;
+    }
+}
+
+.bg-gator-green {
+    background: rgb(0, 90, 55);
+}
+
+.bg-gator-green:hover,
+.bg-gator-green:focus {
+    background: #6c757d !important;
+    color: #fff !important;
+}
+
+.sponsor-card img {
+    max-width: 225px !important;
+    height: auto !important;
+    display: block !important;
 }

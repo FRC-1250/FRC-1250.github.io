@@ -1,4 +1,4 @@
-fetch('html/nav.html')
+fetch('components/nav.html')
     .then(response => response.text())
     .then(htmlContent => {
         const container = document.getElementById('nav');
